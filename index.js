@@ -5,11 +5,11 @@ Study the code below and explain in your own words why nested function can acces
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  //console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    //console.log(internal);
   }
   nestedFunction();
 }
@@ -29,12 +29,14 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  let counter = 0;
-    for(let i = 0; i < 5; i++) {
-    counter += i;
+  let count = 0;
+  for(let i = 0; i <= num; i++) {
+    count += i;
   }
-  return counter
+  return count;
 }
+console.log(summation(4))
+console.log(summation(10))
 
 
 
@@ -78,7 +80,7 @@ const zooAnimals = [
   function lowerCaseNames(array){
     return array.map(item => item.animal_name.toLowerCase());
   }
-  console.log(lowerCaseNames(zooAnimals));
+  //console.log(lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -88,7 +90,7 @@ const zooAnimals = [
   function lowPopulationAnimals(array){
     return array.filter(item => item.population < 5);
   }
-  console.log(lowPopulationAnimals(zooAnimals));
+  //console.log(lowPopulationAnimals(zooAnimals));
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -102,7 +104,7 @@ const zooAnimals = [
     } , 0)
     return totalPop;
   }
-  console.log(USApop(zooAnimals));
+  //console.log(USApop(zooAnimals));
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -137,7 +139,7 @@ function multiply(num1 , num2){
 function greeting(firstName, lastName){
    return `Hello ${firstName} ${lastName}, nice to meet you!`
   }
-  console.log(greeting('Austin','Johnson'))
+  //console.log(greeting('Austin','Johnson'))
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -188,8 +190,8 @@ const cuboid = new CuboidMaker({length: 4, width: 5, height: 5})
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+//console.log(cuboid.volume()); // 100
+//console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -210,8 +212,8 @@ class CuboidMakerTwo{
 const cuboidTwo = new CuboidMaker({length: 4, width: 5, height: 5});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
+//console.log(cuboidTwo.volume()); // 100
+//console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
